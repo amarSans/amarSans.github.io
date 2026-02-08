@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<script src="https://cdn.tailwindcss.com"></script>
+
+
 
 <head>
   <meta charset="UTF-8">
   <title>Muammar | Android Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <header class="bg-gray-800 text-white sticky top-0 z-50">
 
@@ -20,13 +23,41 @@
     </ul>
 
   </nav>
+  <style>
+    .loading::after {
+      content: "";
+      animation: dots 4s infinite steps(3);
+    }
+    
+    @keyframes dots {
+      0%   { content: "."; }
+      50%  { content: ". ."; }
+      100%  { content: ". . ."; }
+    }
+    </style>
+    
+    
 </header>
 
 <body class="bg-gray-900 text-white">
 
   <section class="mx-auto min-h-screen flex flex-col justify-center text-center px-4 ">
-    <img src="https://i.pinimg.com/originals/90/70/32/9070324cdfc07c68d60eed0c39e77573.gif" />
+    <section class="relative min-h-screen flex items-center md:item-center justify-center pt-20 md:pt-0">
 
+      <img
+        src="https://i.pinimg.com/originals/90/70/32/9070324cdfc07c68d60eed0c39e77573.gif"
+        alt="Welcome GIF"
+       
+      />
+      <h1 class="absolute flex items-end font-bold text-white drop-shadow-lg
+           text-[clamp(2.5rem,6vw,6rem)] leading-none">
+        lagi ngopi
+        <span class="loading"></span>
+      </h1>
+      
+    
+    </section>
+    
     <section id="about" class="relative min-h-screen bg-center bg-cover text-white flex items-center py-4 rounded"
       style="background-image: url('img/gambar1.jpg');">
 
@@ -35,7 +66,7 @@
 
       <div class="relative max-w-6xl mx-auto px-1 grid md:grid-cols-3 gap-12 w-full">
 
-        <div class="md:col-span-1 flex justify-center">
+        <div class="md:col-span-1 flex justify-center" data-aos="fade-down" data-aos-delay="200">
           <img src="img/asfafsa.jpg" alt="Profile Photo"
             class="rounded-2xl object-cover aspect-[3/4] w-full max-w-xs shadow-lg" />
         </div>
@@ -43,7 +74,7 @@
         <div class="md:col-span-2 space-y-10">
 
           <div>
-            <h1 class="text-xl md:text-5xl font-bold text-left">
+            <h1 class="text-5xl font-bold text-left">
               Muammar
             </h1>
 
@@ -65,9 +96,9 @@
               Skills
             </h2>
             <div class="flex flex-wrap gap-3">
-              <span class="bg-gray-800 px-4 py-2 rounded-full">Kotlin</span>
-              <span class="bg-gray-800 px-4 py-2 rounded-full">Android</span>
-              <span class="bg-gray-800 px-4 py-2 rounded-full">Python</span>
+              <span class="bg-gray-800 px-4 py-2 rounded-full"data-aos="fade-down" data-aos-delay="400">Kotlin</span>
+              <span class="bg-gray-800 px-4 py-2 rounded-full"data-aos="fade-down" data-aos-delay="500">Android</span>
+              <span class="bg-gray-800 px-4 py-2 rounded-full"data-aos="fade-down" data-aos-delay="600">Python</span>
             </div>
           </div>
           <div>
@@ -88,12 +119,12 @@
 
 
     <section id="projects" class="bg-gray-900 text-white">
-      <section class=" px-6 min-h-screen
-             bg-center bg-cover rounded overflow-hidden flex items-center"
+      <section class=" px-6 min-h-[100svh]
+             bg-center bg-cover rounded overflow-hidden flex md:items-center item-start   pt-24 md:pt-0"
         style="background-image:url('img/iamge2.jpg')">
         <div class="max-w-8xl mx-auto px-6">
 
-          <h2 class="text-4xl font-bold mb-12 text-center">Projects</h2>
+          <h2 class="text-4xl font-bold mb-12 text-center ">Projects</h2>
 
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 ">
 
@@ -103,16 +134,18 @@
               <img src="img/project-01.jpg" alt="Project Screenshot" class="w-full aspect-square object-cover max-h-64">
 
               <div class="p-6">
-                <h3 class="text-2xl font-semibold mb-2">Android Todo App</h3>
+                <h3 class="text-2xl font-semibold mb-2">Inventa'ta</h3>
 
                 <p class="text-gray-400 mb-4">
-                  A simple Android application to manage daily tasks with clean UI.
+                  An application created to minimize errors in stock records for sandal traders at Toddopoli Market, Makassar City
                 </p>
 
                 <div class="flex flex-wrap gap-2 mb-4">
                   <span class="text-sm bg-gray-700 px-3 py-1 rounded-full">Kotlin</span>
                   <span class="text-sm bg-gray-700 px-3 py-1 rounded-full">Android</span>
-                  <span class="text-sm bg-gray-700 px-3 py-1 rounded-full">Room DB</span>
+                  <span class="text-sm bg-gray-700 px-3 py-1 rounded-full">SQLite DB</span>
+                  <span class="text-sm bg-gray-700 px-3 py-1 rounded-full">MVVM</span>
+                  <span class="text-sm bg-gray-700 px-3 py-1 rounded-full">Notifikasi</span>
                 </div>
 
                 <div class="flex gap-4">
@@ -212,6 +245,13 @@
   <footer class="text-center py-6 text-gray-400">
     © 2026 Amar
   </footer>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: false
+    });
+  </script>
 
 </body>
 

@@ -41,16 +41,20 @@
 
 <body class="bg-gray-900 text-white">
 
-  <section class="mx-auto min-h-screen flex flex-col justify-center text-center px-4 ">
-    <section class="relative min-h-screen flex items-center md:item-center justify-center pt-20 md:pt-0">
+  <section class="w-full ">
+    <section class="relative w-full h-[100svh] overflow-hidden">
 
       <img
         src="https://i.pinimg.com/originals/90/70/32/9070324cdfc07c68d60eed0c39e77573.gif"
         alt="Welcome GIF"
+        class="absolute inset-0 w-full h-full mx-auto"
        
       />
-      <h1 class="absolute flex items-end font-bold text-white drop-shadow-lg
-           text-[clamp(2.5rem,6vw,6rem)] leading-none">
+      <h1 class="absolute  top-1/2 left-1/2
+      -translate-x-1/2 -translate-y-1/2
+      font-bold text-white drop-shadow-lg
+      text-[clamp(2.5rem,6vw,6rem)]
+      leading-none">
         lagi ngopi
         <span class="loading"></span>
       </h1>
@@ -58,8 +62,10 @@
     
     </section>
     
-    <section id="about" class="relative min-h-screen bg-center bg-cover text-white flex items-center py-4 rounded"
-      style="background-image: url('img/gambar1.jpg');">
+    <section id="about"
+  class="relative bg-center bg-cover text-white flex items-center py-16 md:min-h-screen rounded"
+  style="background-image: url('img/gambar1.jpg');">
+
 
       <div class="absolute inset-0 bg-black/50"></div>
 
@@ -131,9 +137,9 @@
             <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:scale-105 transition duration-300"
               onclick="window.location.href='halaman/halaman1.html'" style="cursor: pointer;">
 
-              <img src="img/project-01.jpg" alt="Project Screenshot" class="w-full aspect-square object-cover max-h-64">
+              <img src="img/project-01.jpg" alt="Project Screenshot" class="w-full sm:aspect-square object-cover max-h-64">
 
-              <div class="p-6">
+              <div class="p-4 sm:p-6">
                 <h3 class="text-2xl font-semibold mb-2">Inventa'ta</h3>
 
                 <p class="text-gray-400 mb-4">
@@ -145,12 +151,12 @@
                   <span class="text-sm bg-gray-700 px-3 py-1 rounded-full">Android</span>
                   <span class="text-sm bg-gray-700 px-3 py-1 rounded-full">SQLite DB</span>
                   <span class="text-sm bg-gray-700 px-3 py-1 rounded-full">MVVM</span>
-                  <span class="text-sm bg-gray-700 px-3 py-1 rounded-full">Notifikasi</span>
+                  <span class="text-sm bg-gray-700 px-3 py-1 rounded-full">Notification</span>
+                  <span class="text-sm bg-gray-700 px-3 py-1 rounded-full">Offline</span>
                 </div>
 
                 <div class="flex gap-4">
                   <a href="#" class="text-blue-400 hover:underline">GitHub</a>
-                  <a href="#" class="text-green-400 hover:underline">Live Demo</a>
                 </div>
               </div>
 
@@ -160,14 +166,15 @@
               <img src="img/project-01.jpg" alt="Project Screenshot" class="w-full aspect-square object-cover max-h-64">
 
               <div class="p-6">
-                <h3 class="text-2xl font-semibold mb-2">Data Analysis Project</h3>
+                <h3 class="text-2xl font-semibold mb-2">ReadKomik</h3>
                 <p class="text-gray-400 mb-4">
-                  Exploratory data analysis using Python and Pandas.
+                  A minimalist PDF comic reader that supports folder-based selection, automatic file sorting by number, auto-scroll reading, and smooth navigation between comics.
                 </p>
                 <div class="flex flex-wrap gap-2 mb-4">
-                  <span class="text-sm bg-gray-700 px-3 py-1 rounded-full">Python</span>
-                  <span class="text-sm bg-gray-700 px-3 py-1 rounded-full">Pandas</span>
-                  <span class="text-sm bg-gray-700 px-3 py-1 rounded-full">Matplotlib</span>
+                  <span class="text-sm bg-gray-700 px-3 py-1 rounded-full">Kotlin</span>
+                  <span class="text-sm bg-gray-700 px-3 py-1 rounded-full">ROOM DB</span>
+                  <span class="text-sm bg-gray-700 px-3 py-1 rounded-full">Offline</span>
+
                 </div>
                 <div class="flex gap-4">
                   <a href="#" class="text-blue-400 hover:underline">GitHub</a>

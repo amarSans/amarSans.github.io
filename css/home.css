@@ -142,9 +142,14 @@
   }
 @media (max-width: 767px) {
     .about-container {
-      gap: 2rem;
+      grid-template-columns: 1fr;
+      gap: 1rem;
     }
-  
+    .about-photo-wrapper,
+    .about-content{
+      grid-column: 1/ -1;
+      justify-self: center;
+    }  
     .about-name {
       font-size: 2.25rem;
       text-align: center;
@@ -155,7 +160,6 @@
     }
   
     .about-content {
-      grid-column: span 3;
       align-items: center;
       text-align: center;
     }

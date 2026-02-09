@@ -1,5 +1,7 @@
 /* HERO SECTION */
-.hero {
+.hero,
+.projects-hero {
+    min-height: 100vh;
     position: relative;
     width: 100%;
     height: 100svh;
@@ -24,7 +26,9 @@
     font-weight: bold;
     color: white;
     line-height: 1;
-    font-size: clamp(2.5rem, 6vw, 6rem);
+    font-size: clamp(2rem, 7vw, 5rem);
+    text-align: center;
+    padding: 0 1rem;
     text-shadow: 0 4px 10px rgba(0,0,0,.6);
   }
   
@@ -67,7 +71,7 @@
   /* container */
   .about-container {
     position: relative;
-    max-width: 72rem; /* sama dengan max-w-6xl */
+    max-width: 72rem; 
     margin: 0 auto;
     padding: 0 0.25rem;
     display: grid;
@@ -136,6 +140,26 @@
   .about-education {
     color: #d1d5db;
   }
+@media (max-width: 767px) {
+    .about-container {
+      gap: 2rem;
+    }
+  
+    .about-name {
+      font-size: 2.25rem;
+      text-align: center;
+    }
+  
+    .about-title {
+      text-align: center;
+    }
+  
+    .about-content {
+      grid-column: span 3;
+      align-items: center;
+      text-align: center;
+    }
+  }
   
 
   /* PROJECTS SECTION */
@@ -143,6 +167,7 @@
     background-color: #111827;
     color: white;
   }
+  
   
   .projects-hero {
     min-height: 100svh;
@@ -177,6 +202,15 @@
     display: grid;
     gap: 2rem;
   }
+  @media (max-width: 480px) {
+    .projects-grid {
+      gap: 1.25rem;
+    }
+  
+    .project-name {
+      font-size: 1.25rem;
+    }
+  }
   
   @media (min-width: 768px) {
     .projects-grid {
@@ -189,6 +223,20 @@
       grid-template-columns: repeat(3, 1fr);
     }
   }
+  @media (max-width: 640px) {
+    .contact-wrapper {
+      flex-direction: column;
+    }
+  
+    .contact-item {
+      justify-content: flex-start;
+    }
+  
+    .contact-link {
+      text-align: left;
+    }
+  }
+  
   
   /* PROJECT CARD */
   .project-card {
@@ -252,6 +300,12 @@
   .project-links a:hover {
     text-decoration: underline;
   }
+  @media (hover: hover) {
+    .project-card:hover {
+      transform: scale(1.05);
+    }
+  }
+  
   
  /* CONTACT SECTION */
 .contact {
